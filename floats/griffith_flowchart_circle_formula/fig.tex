@@ -1,0 +1,83 @@
+\psfrag{pde}[c][c] {\small $\text{Partial differential equation (PDE)}$}
+% \psfrag{eq}[c][c] {$\mathbf{\nabla}\cdot\left( \textcolor[rgb]{0,0,1}{\mathbb{C}^{f^{GL}}(y) }\mathbf{\nabla}_{s} \Bu \right) + \rho \Bb = 0$}
+\psfrag{eq}[c][c] {\small $\mathbf{\nabla}\cdot\left( \textcolor[rgb]{0,0,1}{\accentset{\scriptstyle 4}{\mathbb{C}}^{f^{\mathbb{D}(\Omega)}_{(\lambda,\mu)}}} \, \mathbf{\nabla}^{(s)} \Bu \right) + \rho\, \Bb = \textbf{0}$}
+
+\psfrag{sgm}[c][c] {\small $\textcolor[rgb]{1,0.41,0.13}{\sigma_{ij}} 
+= \sum_{k,l} 
+\textcolor[rgb]{0,0,1}{\accentset{\scriptstyle 4}{\mathbb{C}}_{ijkl}^{f^{\mathbb{D}(\Omega)}_{(\lambda,\mu)}}}\
+	\textcolor[rgb]{0,0.4,0}{\varepsilon_{kl}}$}
+\psfrag{u}[c][c] {\small $\textcolor[rgb]{1,0,0}{u_{i}} \leftarrow \Bu = \BK^{-1}\Bf$}
+\psfrag{eps}[c][c] {\small $\textcolor[rgb]{0,0.4,0}{\varepsilon_{ij}} =
+		\frac{1}{2}\left(
+		\textcolor[rgb]{1,0,0}{\partial_{x_j} u_{i}} +
+		\textcolor[rgb]{1,0,0}{\partial_{x_i} u_{j}}
+		\right)$}
+\psfrag{estr}[c][c] {\small $\textcolor[rgb]{0.5,0,0.5}{\mathcal{E}_{\text{strain}} }:=
+	\frac{1}{2} \sum_{i,j} \textcolor[rgb]{1,0.41,0.13}{\sigma_{ij}} \, \textcolor[rgb]{0,0.4,0}{\varepsilon_{ij}}$}
+
+\psfrag{ds}[l][l] {\small $\text{Displacement vector field solution}$}
+\psfrag{stra}[l][l] {\small $\text{Strain tensor}$}
+\psfrag{est}[l][l] {\small $\text{Stress tensor}$}
+\psfrag{js}[l][l] {\small $\text{Strain energy density }$}
+\psfrag{ljs}[l][l] {$\textsc{Strain energy }$}
+\psfrag{gf}[l][l] {$\textcolor[rgb]{1,1,1}{\textsc{Griffith criterion}}$}
+
+\psfrag{er}[l][l] {$\text{\scriptsize Energy}$}
+\psfrag{sfer}[l][l] {$\text{\scriptsize Crack-opening surface energy (COSE)}$}
+\psfrag{tser}[l][l] {$\text{\scriptsize Released strain energy (RSE)}$}
+\psfrag{tote}[l][l] {$\text{\scriptsize Total energy}$}
+\psfrag{crle}[l][l] {$\text{\scriptsize Virtual crack length}$}
+
+\psfrag{efcn}[l][l] {$\mathcal{E}(x)$}
+\psfrag{fsf}[l][l] {$\mathcal{E}_{\text{COSE}}(x)$}
+\psfrag{fse}[l][l] {$\mathcal{E}_{\text{RSE}}(x)$}
+\psfrag{drf}[l][l] {$\mathcal{E}_{\text{RSE}}(x) = \hat{f}(x;\textcolor[rgb]{0.5,0,0.5}{\mathcal{E}_{\text{strain}}})$}
+\psfrag{etot}[l][l] {$\mathcal{E}_{\text{total}}(x)$}
+
+\psfrag{nlt}[l][l] {$\mathcal{E}_{\text{total}}(x) = \mathcal{E}_{\text{COSE}}(x) + \mathcal{E}_{\text{RSE}}(x)$}
+\psfrag{fet}[c][c] {$\mathcal{E}_{\text{total}}(x) = \mathcal{E}_{\text{surface}} + \mathcal{E}_{\text{released strain}}$}
+\psfrag{ets}[l][l] {$\mathcal{E}_{\text{released strain}} = -\frac{\sigma^2}{2\BE}\pi a^2$}
+
+\psfrag{ac}[c][c] {$x_{\text{Griff}}$}
+\psfrag{x}[c][c] {$x$}
+\psfrag{y}[c][c] {$y$}
+
+\psfrag{Cm}[l][l] {$\textcolor[rgb]{0,0,1}{\mathbb{C}_{ijkl}^{f^{GL}}(y)}$}
+
+\psfrag{oh}[c][c] {$O$}
+
+\psfrag{lf}[c][c] {$\bar{f}$}
+
+\psfrag{nd}[c][c] {$\scriptsize \text{Non-deformed}$}
+\psfrag{ud}[c][c] {$\scriptsize \text{Deformed}$}
+
+\psfrag{xnz}[c][c] {$\scriptsize \textcolor[rgb]{0.5,0,0.5}{\mathcal{E}_{\text{strain}}} = 0$}
+\psfrag{xns}[c][c] {$\scriptsize \textcolor[rgb]{0.5,0,0.5}{\mathcal{E}_{\text{strain}}} = \bar{\mathcal{E}}_{\text{strain}}$}
+\psfrag{xrl}[c][c] {$\scriptsize \mathcal{E}_{\text{RSE}}(x) \propto \bar{\mathcal{E}}_{\text{strain}}$}
+
+\psfrag{frl}[c][c] {$O$}
+
+\psfrag{fx}[l][l] {$f(x):= \mathcal{E}_{\text{total}}(x) = \mathcal{E}_{\text{COSE}}(x) + \mathcal{E}_{\text{RSE}}(x)$}
+\psfrag{p}[l][l] {$\textcolor[rgb]{1,1,1}{x_{\text{Griff}} = x^* = \arg \displaystyle\ \max_{x\in \mathbb{R}^{+}} f(x) \rightarrow \ \text{Optimization problem}}$}
+
+\psfrag{fu}[l][l]{$\displaystyle \BK\Bu = \Bf
+		%K^{\stackrel{\alpha\beta}{e\ \ }}_{ik} = 
+		%\int_{\Omega^{\xi}}
+		%\left(
+		%\mathcal{L}^{\alpha}_{1} \ \mathbb{C}_{i1k1}^{f^{GL}}(y) \ \mathcal{R}^{\beta}_{1} +
+		%\mathcal{L}^{\alpha}_{1} \ \mathbb{C}_{i1k2}^{f^{GL}}(y) \ \mathcal{R}^{\beta}_{2} +
+		%\mathcal{L}^{\alpha}_{2} \ \mathbb{C}_{i2k1}^{f^{GL}}(y) \ \mathcal{R}^{\beta}_{1} +
+		%\mathcal{L}^{\alpha}_{2} \ \mathbb{C}_{i2k2}^{f^{GL}}(y) \ \mathcal{R}^{\beta}_{2} 
+		%\right)
+		%\det(\BJ) \ d\Omega^{\xi}
+	$}
+
+\psfrag{feps}[l][l]{$\displaystyle
+	\varepsilon_{kl} = \
+	\frac{1}{2} \sum_{\alpha=1}^{\mathcal{N}_{\text{node}}^{\Omega^{e}}} \
+	\left( \sum_{L=1}^{\mathcal{N}_{\text{dof}}^{\Omega^{\text{node}}}} N^{\alpha}_{,\xi_{L}}\xi_{L,x_{k}} \textcolor[rgb]{1,0,0}{u}_{k}^{\alpha}
+	+\sum_{K=1}^{\mathcal{N}_{\text{dof}}^{\Omega^{\text{node}}}} N^{\alpha}_{,\xi_{K}}\xi_{K,x_{l}} \textcolor[rgb]{1,0,0}{u}_{l}^{\alpha} \right)$}
+
+\psfrag{fest}[l][l]{$\displaystyle \sigma_{ij} = \textcolor[rgb]{0,0,1}{\mathbb{C}_{ijkl}^{f^{GL}}(y)}\ \varepsilon_{kl} $}
+
+\includegraphics[width=1.0\textwidth]{griffith_flowchart_circle_formula.eps}
