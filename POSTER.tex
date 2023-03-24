@@ -201,14 +201,14 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			\textbf{Next-generation All-solid-state battery} (ng-ASSB)
 			with a consideration of \textcolor{red}{nucleation criterion} defined by
 			\begin{align*}
-				a_{\text{Griffith}} := a^{*} = \arg\min_{a\in\mathbb{R}}{\bigintsss\!\!\!\!\!\!\bigintsss\!\!\!\!\!\!\bigintsss_{\Omega} f(a,\bm{u},\theta;\lambda,\mu,\bm{d}^{R}\otimes\bm{d}^{R}) \, d\Omega - \bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma} f(a;\gamma) \, d\Gamma}\Bigg|_{\bm{u}}
+				a_{\text{Griffith}} := a^{*} = \arg\min_{a\in\mathbb{R}}{\bigintsss\!\!\!\!\!\!\bigintsss\!\!\!\!\!\!\bigintsss_{\Omega} f(a,\bm{u},\theta;\lambda,\mu,\bm{d}^{(\star)}\otimes\bm{d}^{(\star)}) \, d\Omega - \bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma} f(a;\gamma) \, d\Gamma}\Bigg|_{\bm{u}}
 			\end{align*}
 			where 
 			$\Bu$ displacement field, 
 			$\theta$ temperature field, 
 			$a$ crevice length,
 			$\lambda, \mu$ Lam\'{e} constants,
-			$\Bd^{R}\otimes\Bd^{R}$ embedded misorientation structural tensor,
+			$\Bd^{(\star)}\otimes\Bd^{(\star)}$ embedded misorientation structural tensor,
 			and 
 			$\gamma$ cracking-surface energy density,
 			% \colorbox{pink}{can help} 
@@ -268,7 +268,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 		nuances of destruction.
 		% ceramic-like materials.
 		\begin{align*}
-			\BM = \Bd^{R}_{G_1} \otimes \Bd^{R}_{G_2}
+			\BM = \Bd^{(\star)}_{G_1} \otimes \Bd^{(\star)}_{G_2}
 			\quad 
 			\text{given by}
 			\quad
@@ -330,7 +330,9 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			$r(\Bx,t)$ heat source puv; 
 			$\Bsigma$ Cauchy stress and 
 			$\Bvarepsilon$ infinitesimal strain.
-			Then, the governing partial differential equation (PDE) of deformation 
+			Then, the governing partial differential equation (PDE) 
+			for the thermodynamically consistent coupled problem
+			with deformation field $\Bu$ as its variable
 			takes the form
 			\begin{align*}
 				\partial_{t}\bm{u}
@@ -478,7 +480,9 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 					)
 					}
 				$
+				\vspace{0.1cm}
 				}
+				where displacement field $\Bu$ is known, numerically computed from the PDE above.
 			\end{mdframed}
 			\begin{mdframed}
 				\textit{Griffith}-based critical stress
