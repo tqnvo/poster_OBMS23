@@ -55,6 +55,8 @@ subcolspace=0mm]{tikzposter}
 
 \usepackage{cancel}
 
+% \usepackage[dvipsnames]{xcolor}
+
 % -- Commands --------------------------------------------------------%
 % \newcommand{\wall}{\text{w}}
 % \newcommand{\interf}{\text{i}}
@@ -150,6 +152,10 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 %\definecolor{main}{HTML}{0080FF}
 %\definecolor{sub}{HTML}{8CDBFF}
 %\usecolorstyle[colorOne=sub, colorTwo=main]{Default}
+
+
+\definecolor{myoxford}{HTML}{002147}
+
 % ---------------------------------------------------------------------------------------------------------------- %
 \begin{document}
 % Title block
@@ -166,7 +172,8 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 				Nowadays, LIBs enable human life more efficient 
 				and help to solve global environment issues thanks to EVs' zero emission.
 				However, conventional LIB (c-LIB) is sensible to temperature and pressure, 
-				hence, flammable and explosive, which is \colorbox{pink}{undesirable}. 
+				hence, flammable and explosive, which is undesirable. 
+				% \colorbox{pink}{undesirable}.
 				This bottleneck is
 				mainly due to \textcolor{red}{liquid-based electrolyte} found in c-LIBs.
 			\end{mdframed}
@@ -184,7 +191,9 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 				since these dendritic threads
 				extrapolate into SSE grain boundary network, 
 				causing crevice, degradation of ionic conductivity,
-				and the probability of short-circuit, which is \colorbox{pink}{unfavorable}.
+				and the probability of short-circuit, which is 
+				unfavorable.
+				% \colorbox{pink}{unfavorable}.
 			\end{mdframed}
 		\end{minipage}
 		%
@@ -192,7 +201,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			\textbf{Next-generation All-solid-state battery} (ng-ASSB)
 			with a consideration of \textcolor{red}{nucleation criterion} defined by
 			\begin{align*}
-				a_{\text{Griffith}} := a^{*} = \arg\min_{a\in\mathbb{R}}{\bigintsss\!\!\!\!\!\!\bigintsss\!\!\!\!\!\!\bigintsss_{\Omega} f(a,\bm{u},\theta;\lambda,\mu,\bm{d}^{R}\otimes\bm{d}^{R}) \, d\Omega - \bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma} f(a;\gamma) \, d\Gamma}\Bigg|_{\bm{u}^{(s)}}
+				a_{\text{Griffith}} := a^{*} = \arg\min_{a\in\mathbb{R}}{\bigintsss\!\!\!\!\!\!\bigintsss\!\!\!\!\!\!\bigintsss_{\Omega} f(a,\bm{u},\theta;\lambda,\mu,\bm{d}^{R}\otimes\bm{d}^{R}) \, d\Omega - \bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma} f(a;\gamma) \, d\Gamma}\Bigg|_{\bm{u}}
 			\end{align*}
 			where 
 			$\Bu$ displacement field, 
@@ -202,13 +211,15 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			$\Bd^{R}\otimes\Bd^{R}$ embedded misorientation structural tensor,
 			and 
 			$\gamma$ cracking-surface energy density,
-			\colorbox{pink}{can help} to improve ASSB performance.
+			% \colorbox{pink}{can help} 
+			can help 
+			to improve ASSB performance.
 		\end{mdframed}
 	\end{minipage}%
 	\hfill
 	\begin{minipage}{0.44\textwidth}
 		\begin{center}
-			\inputfig{floats/routine_woTV_spectral}{routine_woTV_spectral}
+			\inputfig{floats/routine_woTV_spectral_python}{routine_woTV_spectral_python}
 		\end{center}
 	\end{minipage}
 	\vspace{-0.3cm}
