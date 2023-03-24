@@ -408,6 +408,29 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 	\end{minipage}
 	\hfill
 	\begin{minipage}{0.54\textwidth}
+		\begin{mdframed}
+			\underline{Analysis}: Airy-Westergaard function used for stress analysis:
+			(i) max. shear stress and (ii) principal stresses
+			\begin{align*}
+				\WA:
+				\begin{cases}
+					\mbC\to\mbC, \\
+					% \displaystyle
+					z \mapsto \WAz:=
+					\Re(\bigoiintssss_{\Gamma} \mcK^{(\star)}\,dz )
+					+ x_2\,
+					\Im(\bigointsss_{\Gamma} \mcK^{(\star)}\,dz ),
+				\end{cases}
+				\mcK^{(\star)}:
+				\begin{cases}
+					\mbC \to \mbC, \\
+					z \mapsto 
+					\mcK^{(\star)}:=
+					- p_{h} + p_{h}/\sqrt{1 - a^2/z^2},\
+				\end{cases}
+			\end{align*}
+			where $a$ the crevice length, $p_{h}$ pressure at the opening crevice on dendritic interface, and $\forall \, \{p_{h},a\}\in\mbR_{+}$.
+		\end{mdframed}
 		\begin{minipage}{0.7\textwidth}
 			\begin{mdframed}
 				\underline{Boundary conditions}
@@ -416,10 +439,10 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 				\end{center}
 			\end{mdframed}
 			\begin{mdframed}
-				Numerical spectral of \emph{Griffith} criterion in $x$-direction at (SE|SSE) yields
+				Numerical spectral of \emph{Griffith} criterion at (SE|SSE) yields (xx-yy-xy)
 				% The set of boundary conditions is likewise the path of the pressure-centric dendritic crack.\\
 				\begin{center}
-					\inputfig{floats/routine_woTV_numa_one}{routine_woTV_numa_one}
+					\inputfig{floats/routine_woTV_numa_3x5}{routine_woTV_numa_3x5}
 				\end{center}
 				% \underline{Comparison}: Analytical vs. Numerical solutions
 				% \begin{center}
@@ -456,48 +479,24 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			\end{mdframed}
 		\end{minipage}
 		%
-		\begin{mdframed}
-			\underline{Analysis}: Airy-Westergaard function used for stress analysis:
-			(i) max. shear stress and (ii) principal stresses
-			\begin{align*}
-				\WA:
-				\begin{cases}
-					\mbC\to\mbC, \\
-					% \displaystyle
-					z \mapsto \WAz:=
-					\Re(\bigoiintssss_{\Gamma} \mcK^{(\star)}\,dz )
-					+ x_2\,
-					\Im(\bigointsss_{\Gamma} \mcK^{(\star)}\,dz ),
-				\end{cases}
-				\mcK^{(\star)}:
-				\begin{cases}
-					\mbC \to \mbC, \\
-					z \mapsto 
-					\mcK^{(\star)}:=
-					- p_{h} + p_{h}/\sqrt{1 - a^2/z^2},\
-				\end{cases}
-			\end{align*}
-			where $a$ the crevice length, $p_{h}$ pressure at the opening crevice on dendritic interface, and $\forall \, \{p_{h},a\}\in\mbR_{+}$.
-		\end{mdframed}
-		%
-		\begin{mdframed}
-			\underline{Numerics $\rightarrow$ FEM}:
-			element matrix $\BK^{e}$
-			approx. by \textit{Gauss quadrature}; 
-			indices imply \textit{$4+2=6$ \textit{for}-loop}:
-			\begin{align*}
-				K^{\stackrel{\alpha\beta}{e\ \ }}_{ik} = 
-				\int_{\Omega^{\xi}}
-				\left(
-				\mathcal{L}^{\alpha}_{1} \ \mathbb{C}_{i1k1}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{1} +
-				\mathcal{L}^{\alpha}_{1} \ \mathbb{C}_{i1k2}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{2} +
-				\mathcal{L}^{\alpha}_{2} \ \mathbb{C}_{i2k1}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{1} +
-				\mathcal{L}^{\alpha}_{2} \ \mathbb{C}_{i2k2}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{2}
-				\right)
-				\det(\BJ) \ d\Omega^{\xi}
-			\end{align*}
-			where $\mathcal{L}^{\alpha}_{j}$ and $\mathcal{R}^{\beta}_{l}$ are gradients of basis functions at node $\alpha^{th}$ and $\beta^{th}$, respectively.
-		\end{mdframed}
+		% \begin{mdframed}
+		% 	\underline{Numerics $\rightarrow$ FEM}:
+		% 	element matrix $\BK^{e}$
+		% 	approx. by \textit{Gauss quadrature}; 
+		% 	indices imply \textit{$4+2=6$ \textit{for}-loop}:
+		% 	\begin{align*}
+		% 		K^{\stackrel{\alpha\beta}{e\ \ }}_{ik} = 
+		% 		\int_{\Omega^{\xi}}
+		% 		\left(
+		% 		\mathcal{L}^{\alpha}_{1} \ \mathbb{C}_{i1k1}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{1} +
+		% 		\mathcal{L}^{\alpha}_{1} \ \mathbb{C}_{i1k2}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{2} +
+		% 		\mathcal{L}^{\alpha}_{2} \ \mathbb{C}_{i2k1}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{1} +
+		% 		\mathcal{L}^{\alpha}_{2} \ \mathbb{C}_{i2k2}^{f^{GL}}(\Bx) \ \mathcal{R}^{\beta}_{2}
+		% 		\right)
+		% 		\det(\BJ) \ d\Omega^{\xi}
+		% 	\end{align*}
+		% 	where $\mathcal{L}^{\alpha}_{j}$ and $\mathcal{R}^{\beta}_{l}$ are gradients of basis functions at node $\alpha^{th}$ and $\beta^{th}$, respectively.
+		% \end{mdframed}
 	\end{minipage}
 	\vspace{-0.4cm}
 }
