@@ -409,8 +409,9 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 	\hfill
 	\begin{minipage}{0.54\textwidth}
 		\begin{mdframed}
-			\underline{Analysis}: Airy-Westergaard function used for stress analysis:
+			Analysis: \textit{Airy-Westergaard} fcn. used for stress analysis:
 			(i) max. shear stress and (ii) principal stresses
+			\vspace{-0.2cm}
 			\begin{align*}
 				\WA:
 				\begin{cases}
@@ -429,11 +430,12 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 					- p_{h} + p_{h}/\sqrt{1 - a^2/z^2},\
 				\end{cases}
 			\end{align*}
+			\vspace{-0.3cm}
 			where $a$ the crevice length, $p_{h}$ pressure at the opening crevice on dendritic interface, and $\forall \, \{p_{h},a\}\in\mbR_{+}$.
 		\end{mdframed}
 		\begin{minipage}{0.7\textwidth}
 			\begin{mdframed}
-				\underline{Boundary conditions}
+				Boundary conditions applied on a solid-state object
 				\begin{center}
 					\inputfig{floats/structuraltwofields}{structuraltwofields}
 				\end{center}
@@ -448,6 +450,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 				% \begin{center}
 				% 	\inputfig{floats/comparison_ana_numa}{comparison_ana_numa}
 				% \end{center}
+				\vspace{-0.5cm}
 				where a sample of $5$ cases with various prescribed crevice length is studied.
 			\end{mdframed}
 		\end{minipage}
@@ -455,7 +458,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 		\begin{minipage}{0.3\textwidth}
 			\begin{mdframed}
 				FEM: Strain energy density
-				\vspace{0.1cm}
+				\vspace{0.3cm}
 				\inputfig{floats/griffith_flowchart_circle_formula}{griffith_flowchart_circle_formula}
 				{\small Strain solution takes the following form}\\
 				% $\tiny \sigma_{ij} = \mathbb{C}_{ijkl}^{f^{GL}}(y)\ \textcolor[rgb]{1,0,0}{\varepsilon_{kl}}$\\
@@ -476,6 +479,13 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 					}
 				$
 				}
+			\end{mdframed}
+			\begin{mdframed}
+				\textit{Griffith}-based critical stress
+				\begin{align*}
+					\sigma_{\text{Griffith}} = \sqrt{\frac{2\, E\, \gamma}{\pi \, a_{\text{crevice}}}}
+				\end{align*}
+				governs nucleation interface.
 			\end{mdframed}
 		\end{minipage}
 		%
@@ -626,8 +636,8 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 	\hfill
 	\begin{minipage}{0.05\textwidth}
 		% \begin{center}
-			\psfrag{obms}[c][c] {$\textbf{\#OBMS2023}\hphantom{aaaaaaaaaa}$}
-			\includegraphics[width=0.85\textwidth]{./floats/logos/obms23_hashtag.eps}
+		\psfrag{obms}[c][c] {$\textbf{\#OBMS2023}\hphantom{aaaaaaaaaa}$}
+		\includegraphics[width=0.85\textwidth]{./floats/logos/obms23_hashtag.eps}
 		% \end{center}
 	\end{minipage}
 	\hfill
