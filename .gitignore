@@ -280,3 +280,6 @@ TSWLatexianTemp*
 *.tcp
 *.sty
 floats/*
+defcml.sty
+defcmlfont.sty
+POSTER.tex
