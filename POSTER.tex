@@ -95,6 +95,7 @@ subcolspace=0mm]{tikzposter}
 
 \newcommand{\bigoiintsss}{\mathlarger{\mathlarger{\varoiint}}}
 \newcommand{\bigoiintssss}{\mathlarger{\varoiint}}
+\newcommand{\bigoiintsssss}{\varoiint}
 
 \newcommand{\Kipc}{\mathcal{K}^{c}}
 \newcommand{\Kipcz}{\mathcal{K}^{c}(z)}
@@ -201,7 +202,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			\textbf{Next-generation All-solid-state battery} (ng-ASSB)
 			with a consideration of \textcolor{red}{nucleation criterion} defined by
 			\begin{align*}
-				a_{\text{Griffith}} := a^{*} = \arg\min_{a\in\mathbb{R}}{\bigintsss\!\!\!\!\!\!\bigintsss\!\!\!\!\!\!\bigintsss_{\Omega} f(a,\bm{u},\theta;\lambda,\mu,\bm{d}^{(\star)}\otimes\bm{d}^{(\star)}) \, d\Omega - \bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma} f(a;\gamma) \, d\Gamma}\Bigg|_{\bm{u}}
+				a_{\text{Griffith}} := a^{*} = \arg\min_{a\in\mathbb{R}}{\bigintsss\!\!\!\!\!\!\bigintsss\!\!\!\!\!\!\bigintsss_{\Omega} f(a,\bm{u},\theta;\lambda,\mu,\bm{d}^{(\star)}\otimes\bm{d}^{(\star)}) \, d\Omega - \bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma} f(a;\gamma) \, d\Gamma}\Bigg|_{\bar{\bm{u}}}
 			\end{align*}
 			where 
 			$\Bu$ displacement field, 
@@ -398,9 +399,13 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 				= \arg\min_{a\in\mathbb{R}}
 				{
 					\bigintsss\!\!\!\!\!\!\bigintsss\!\!\!\!\!\!\bigintsss_{\Omega}
-					f(a,\bm{u},\theta;\lambda,\mu,\bm{d}\otimes\bm{d}) \, d\Omega
+					\!\!
+					f(a,\bm{u},\theta;\lambda,\mu,\bm{d}^{(\star)}\otimes\bm{d}^{(\star)}) \, d\Omega
 					- 
-					\bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma} f(a;\gamma) \, d\Gamma
+					\!\!\!\!
+					\bigintsss\!\!\!\!\!\!\bigintsss_{\Gamma} 
+					\!\!
+					f(a;\gamma) \, d\Gamma
 				}
 				\Big|_{\bar{\bm{u}}}
 			\end{align}
@@ -418,11 +423,11 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 				\WA:
 				\begin{cases}
 					\mbC\to\mbC, \\
-					% \displaystyle
+					\displaystyle
 					z \mapsto \WAz:=
-					\Re(\bigoiintssss_{\Gamma} \mcK^{(\star)}\,dz )
+					\Re(\bigoiintsssss_{\Gamma} \mcK^{(\star)}\,dz )
 					+ x_2\,
-					\Im(\bigointsss_{\Gamma} \mcK^{(\star)}\,dz ),
+					\Im(\bigointssss_{\Gamma} \mcK^{(\star)}\,dz ),
 				\end{cases}
 				\mcK^{(\star)}:
 				\begin{cases}
@@ -487,7 +492,7 @@ Forschungszentrum Jülich, Wilhelm-Johnen-Straße, 52428 Jülich, Germany
 			\begin{mdframed}
 				\textit{Griffith}-based critical stress
 				\begin{align*}
-					\sigma_{\text{Griffith}} = \sqrt{\frac{2\, E\, \gamma}{\pi \, a_{\text{crevice}}}}
+					\sigma_{\text{Griffith}} = \sqrt{\frac{2\, \gamma \, E}{\pi \, a_{\text{crevice}}}}
 				\end{align*}
 				governs nucleation interface.
 			\end{mdframed}
